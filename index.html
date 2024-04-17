@@ -1,7 +1,7 @@
 <!doctype html>
  <html lang="en">
    <head>
-     <title>Contoso Sample Web Chat</title>
+     <title>Malaysia Compliance Buddy</title>
      <!--
        This styling is for the Web Chat demonstration purposes.
        It is recommended that style is moved to a separate file for organization in larger projects.
@@ -21,35 +21,55 @@
        h1 {
          color: whitesmoke;
          font-family: Segoe UI;
-         font-size: 16px;
+         font-size: 25px;
          line-height: 20px;
          margin: 0;
          padding: 0 20px;
        }
+       h2 {
+         color: whitesmoke;
+         font-family: Segoe UI Light;
+         font-size: 10px;
+         line-height: 20px;
+         margin: 0.5em 0 0 0;
+         padding: 0 20px;
+       }
 
        #banner {
-         align-items: center;
+         align-items: end;
+         background-color: black;
+         display: flex;
+         height: 50px;
+       }
+       
+       #banner2 {
+         align-items: top;
          background-color: black;
          display: flex;
          height: 50px;
        }
 
        #webchat {
-         height: calc(100% - 50px);
+         height: calc(100% - 100px);
          overflow: hidden;
          position: fixed;
-         top: 50px;
+         top: 100px;
          width: 100%;
        }
      </style>
    </head>
-   <body>
-     <div>
-       <div id="banner">
-         <h1>Contoso copilot name</h1>
-       </div>
-       <div id="webchat" role="main"></div>
+<body>
+  <div>
+     <div id="banner">
+        <h1>Malaysia Compliance Buddy</h1>
+        <img src="malaysia.png" alt="Logo" style="float: right; height: 20px;">
+        <img src="microsoft.png" alt="Logo" style="float: right; height: 20px; margin-left: 10px;">
      </div>
+     <div id="banner2">
+        <h2>Data based on official certifications and documentation from Microsoft and Bank Negara</h2>
+     </div>
+     <div id="webchat" role="main"></div>
+  </div>
 
      <!--
        In this sample, the latest version of Web Chat is being used.
@@ -70,7 +90,7 @@
 
          // Specifies the token endpoint URL.
          // To get this value, visit Copilot Studio > Settings > Channels > Mobile app page.
-         const tokenEndpointURL = new URL('<COPILOT TOKEN ENDPOINT>');
+         const tokenEndpointURL = new URL('https://d03ae4965476e587b7a9d7382c00a1.98.environment.api.powerplatform.com/powervirtualagents/botsbyschema/cr240_complianceBuddy/directline/token?api-version=2022-03-01-preview');
 
          // Specifies the language the copilot and Web Chat should display in:
          // - (Recommended) To match the page language, set it to document.documentElement.lang
